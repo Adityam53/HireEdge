@@ -236,7 +236,6 @@
 }
 
 .submit-btn:hover {
-   padding: 0 2rem; 
   background-color: var(--accent);
   color: #1a1a1a;                 
 }
