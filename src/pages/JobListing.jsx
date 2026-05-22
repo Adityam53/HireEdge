@@ -1,7 +1,7 @@
 import JobList from "../components/JobList";
 import PageHeading from "../components/PageHeading";
 
-const Homee = () => {
+const JobListing = () => {
   return (
     <>
       <div className="main">
@@ -11,4 +11,4 @@ const Homee = () => {
     </>
   );
 };
-export default Homee;
+export default JobListing;

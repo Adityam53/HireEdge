@@ -8,7 +8,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Jobs from "./pages/Jobs";
 import { JobProvider } from "./contexts/JobContext";
-import Homee from "./pages/Homee";
+import JobListing from "./pages/JobListing";
+import Landing from "./pages/Landing";
 function App() {
   return (
     <>
@@ -18,14 +19,15 @@ function App() {
         <JobProvider>
           <Header />
           <Routes>
-            <Route path="/" element={<Homee />}></Route>
+            <Route path="/" element={<Landing />}></Route>
+            <Route path="/jobListing" element={<JobListing />}></Route>
             <Route path="/jobs" element={<Jobs />}></Route>
             <Route path="/createJob" element={<CreateJob />}></Route>
             <Route path="/jobs/:jobId" element={<JobDetails />}></Route>
           </Routes>
           <Footer />{" "}
         </JobProvider>
-        <ToastContainer position="top-right" autoClose={2000} theme="dark" />
+        <ToastContainer position="top-right" autoClose={2000} theme="light" />
       </Router>{" "}
     </>
   );

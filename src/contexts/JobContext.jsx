@@ -85,8 +85,9 @@ export const JobProvider = ({ children }) => {
       if (!res.ok) throw new Error("Failed to add job");
 
       const newJob = await res.json();
+      console.log(newJob);
 
-      setJobs((prev) => [...prev, newJob]);
+      setJobs((prev) => [...prev, newJob.savedJob]);
 
       toast.success("Job posted successfully!");
 

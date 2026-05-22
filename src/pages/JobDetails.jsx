@@ -4,48 +4,64 @@ import { useJobContext } from "../contexts/JobContext";
 const JobDetails = () => {
   const { jobs } = useJobContext();
   const { jobId } = useParams();
+
   const jobDetails = jobs.find((job) => job._id === jobId);
-  console.log(jobDetails);
 
   return (
     <div className="container main">
       {jobDetails ? (
-        <div className="card-detail-align">
-          <div className="card-detail">
-            <h1 className="card-heading">{jobDetails.title}</h1>
-            <div className="card-info">
-              <p className="card-text">
-                <strong>Company Name:</strong>{" "}
-                {jobDetails.company[0].companyName}
-              </p>
-              <p className="card-text">
-                <strong>Location:</strong> {jobDetails.company[0].location}
-              </p>
-              <p className="card-text">
-                <strong>Salary:</strong> {jobDetails.company[0].salary}
-              </p>
-              <p className="card-text">
-                <strong>Job Type:</strong> {jobDetails.company[0].jobType}
-              </p>
-              <p className="card-text">
-                <strong>Description:</strong>{" "}
-                {jobDetails.company[0].jobDescription}
-              </p>
-              <p className="card-text">
-                <strong>Qualifications:</strong>
-                <ol className="card-text-list">
-                  {jobDetails.company[0].qualifications.map((qua) => (
-                    <li>{qua}</li>
-                  ))}
-                </ol>
-              </p>
+        <div className="job-detail-wrapper">
+          <div className="job-detail-card">
+            <div className="job-detail-header">
+              <h1>{jobDetails.title}</h1>
+              <span className="job-type-badge">
+                {jobDetails.company[0].jobType}
+              </span>
+            </div>
+
+            <div className="job-detail-grid">
+              <div className="detail-item">
+                <h4>Company</h4>
+                <p>{jobDetails.company[0].companyName}</p>
+              </div>
+
+              <div className="detail-item">
+                <h4>Location</h4>
+                <p>{jobDetails.company[0].location}</p>
+              </div>
+
+              <div className="detail-item">
+                <h4>Salary</h4>
+                <p>₹ {jobDetails.company[0].salary}</p>
+              </div>
+
+              <div className="detail-item">
+                <h4>Employment Type</h4>
+                <p>{jobDetails.company[0].jobType}</p>
+              </div>
+            </div>
+
+            <div className="detail-section">
+              <h3>Job Description</h3>
+              <p>{jobDetails.company[0].jobDescription}</p>
+            </div>
+
+            <div className="detail-section">
+              <h3>Qualifications</h3>
+
+              <ul className="qualification-list">
+                {jobDetails.company[0].qualifications.map((qua, index) => (
+                  <li key={index}>{qua}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       ) : (
-        "Job Not found"
+        <p className="center">Job Not Found</p>
       )}
     </div>
   );
 };
+
 export default JobDetails;

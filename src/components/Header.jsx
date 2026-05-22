@@ -10,13 +10,20 @@ const Header = () => {
           </Link>
           <ul className="nav">
             <li className="nav-item">
-              <Link to="/jobs" className="nav-link">
-                Job Posting
+              <Link to="/" className="nav-link">
+                Home
               </Link>
             </li>
+
+            <li className="nav-item">
+              <Link to="/jobs" className="nav-link">
+                Find Jobs
+              </Link>
+            </li>
+
             <li className="nav-item">
               <Link to="/createJob" className="nav-link">
-                Post a Job
+                Post Job
               </Link>
             </li>
           </ul>
