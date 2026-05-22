@@ -4,7 +4,7 @@ import PageHeading from "../components/PageHeading";
 const CreateJob = () => {
   return (
     <div className="main">
-      <PageHeading name="Create Job Opening" />
+      <PageHeading name="Start Hiring" />
       <JobForm />
     </div>
   );

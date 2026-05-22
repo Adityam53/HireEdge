@@ -6,7 +6,7 @@ const Jobs = () => {
   return (
     <>
       <div className="main">
-        <PageHeading name="Job Openings" />
+        <PageHeading name="Find Your Next Role" />
         <Search />
         <JobList />
       </div>

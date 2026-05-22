@@ -6,6 +6,7 @@ const JobDetails = () => {
   const { jobId } = useParams();
 
   const jobDetails = jobs.find((job) => job._id === jobId);
+  const company = jobDetails?.company?.[0];
 
   return (
     <div className="container main">
@@ -14,43 +15,41 @@ const JobDetails = () => {
           <div className="job-detail-card">
             <div className="job-detail-header">
               <h1>{jobDetails.title}</h1>
-              <span className="job-type-badge">
-                {jobDetails.company[0].jobType}
-              </span>
+              <span className="job-type-badge">{company?.jobType}</span>
             </div>
 
             <div className="job-detail-grid">
               <div className="detail-item">
                 <h4>Company</h4>
-                <p>{jobDetails.company[0].companyName}</p>
+                <p>{company?.companyName}</p>
               </div>
 
               <div className="detail-item">
                 <h4>Location</h4>
-                <p>{jobDetails.company[0].location}</p>
+                <p>{company?.location}</p>
               </div>
 
               <div className="detail-item">
                 <h4>Salary</h4>
-                <p>₹ {jobDetails.company[0].salary}</p>
+                <p>₹ {company?.salary}</p>
               </div>
 
               <div className="detail-item">
                 <h4>Employment Type</h4>
-                <p>{jobDetails.company[0].jobType}</p>
+                <p>{company?.jobType}</p>
               </div>
             </div>
 
             <div className="detail-section">
               <h3>Job Description</h3>
-              <p>{jobDetails.company[0].jobDescription}</p>
+              <p>{company?.jobDescription}</p>
             </div>
 
             <div className="detail-section">
               <h3>Qualifications</h3>
 
               <ul className="qualification-list">
-                {jobDetails.company[0].qualifications.map((qua, index) => (
+                {company?.qualifications.map((qua, index) => (
                   <li key={index}>{qua}</li>
                 ))}
               </ul>

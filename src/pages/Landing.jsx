@@ -5,10 +5,12 @@ const Landing = () => {
   return (
     <>
       <section className="hero">
-        <div className="hero-content">
-          <h1>Find Your Dream Job Today</h1>
+        <div className="container hero-content">
+          <h1>Connecting Talent With Opportunity</h1>
+
           <p>
-            Discover thousands of opportunities from top companies worldwide.
+            HireEdge helps companies find exceptional candidates and empowers
+            professionals to discover meaningful career opportunities.
           </p>
 
           <div className="hero-buttons">
@@ -23,26 +25,67 @@ const Landing = () => {
         </div>
       </section>
 
-      <section className="stats">
-        <div className="stat-card">
-          <h2>5000+</h2>
-          <p>Active Jobs</p>
-        </div>
+      <section className="featured-section">
+        <div className="">
+          <div className="featured-header container">
+            <h2>Explore Open Roles</h2>
 
-        <div className="stat-card">
-          <h2>1200+</h2>
-          <p>Companies</p>
-        </div>
+            <Link to="/jobs" className="view-all-link">
+              View All →
+            </Link>
+          </div>
 
-        <div className="stat-card">
-          <h2>25k+</h2>
-          <p>Candidates</p>
+          <JobList numberOfJobs={6} />
         </div>
       </section>
 
-      <section className="latest-jobs">
-        <h2 className="section-title container">Featured Opportunities</h2>
-        <JobList numberOfJobs={6} />
+      <section className="about-section">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Why Choose HireEdge</h2>
+
+            <p>
+              A modern hiring platform designed to help employers connect with
+              skilled professionals and enable candidates to discover rewarding
+              career opportunities.
+            </p>
+          </div>
+
+          <div className="about-grid">
+            <div className="about-card">
+              <div className="about-icon">✓</div>
+
+              <h3>Verified Opportunities</h3>
+
+              <p>
+                Explore curated openings from trusted companies with transparent
+                requirements and clearly defined responsibilities.
+              </p>
+            </div>
+
+            <div className="about-card">
+              <div className="about-icon">⚡</div>
+
+              <h3>Faster Hiring</h3>
+
+              <p>
+                Employers can publish vacancies quickly, manage applicants
+                efficiently, and connect with qualified candidates faster.
+              </p>
+            </div>
+
+            <div className="about-card">
+              <div className="about-icon">📈</div>
+
+              <h3>Career Growth</h3>
+
+              <p>
+                Discover opportunities across technology, design, marketing,
+                finance, operations, and many other growing industries.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
