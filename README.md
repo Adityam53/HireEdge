@@ -15,18 +15,12 @@ Developed using React JS, React Router, HTML, CSS, JavaScript, Node.js, Express.
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-username/HireEdge.git
+https://github.com/Adityam53/HireEdge.git
 cd HireEdge
-
-# Frontend
 cd FrontEnd
 npm install
 npm run dev
 
-# Backend
-cd ../BackEnd
-npm install
-npm start
 ```
 
 ---
