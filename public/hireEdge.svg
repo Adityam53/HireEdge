@@ -1,0 +1,26 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="256" height="256" rx="56" fill="#FFFFFF"></rect>
+
+  <!-- Soft glow -->
+  <circle cx="128" cy="128" r="92" fill="#2563EB" opacity="0.08"></circle>
+
+  <!-- Left pillar -->
+  <rect x="52" y="48" width="36" height="160" rx="18" fill="#2563EB"></rect>
+
+  <!-- Right pillar -->
+  <rect x="168" y="48" width="36" height="160" rx="18" fill="#2563EB"></rect>
+
+  <!-- Crossbar -->
+  <rect x="88" y="108" width="80" height="36" rx="18" fill="#2563EB"></rect>
+
+  <!-- Career growth arrow -->
+  <path d="M128 168
+       L168 128
+       M168 128
+       H142
+       M168 128
+       V154" stroke="#60A5FA" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+
+</svg>
